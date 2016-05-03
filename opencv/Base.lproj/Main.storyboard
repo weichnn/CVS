@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="OII-x6-X3i">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Introduction-->
+        <scene sceneID="eH9-Zg-dr8">
+            <objects>
+                <viewController id="b7X-TD-NML" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PfQ-vT-DGm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" id="xYu-bj-nl3">
+                                <rect key="frame" x="20" y="448" width="335" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Xsv-fN-di9">
+                                <rect key="frame" x="0.0" y="65" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9KI-hY-6LZ">
+                                <rect key="frame" x="204" y="611" width="88" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Video" image="camera.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="al8-eY-kEO" kind="push" identifier="processVideo" id="P3T-AW-XCo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="48O-Wq-JkU">
+                                <rect key="frame" x="68" y="611" width="99" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Picture" image="photos_polaroid.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mcu-Nx-qmh" kind="push" identifier="processImage" id="LKy-cK-gvl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Introduction" id="DyX-DD-Wqh"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="runOnImageButton" destination="48O-Wq-JkU" id="Az5-iw-W2z"/>
+                        <outlet property="runOnVideoButton" destination="9KI-hY-6LZ" id="9H2-V6-Obm"/>
+                        <outlet property="sampleDescriptionTextView" destination="xYu-bj-nl3" id="XOM-Ev-7iU"/>
+                        <outlet property="sampleIconView" destination="Xsv-fN-di9" id="Sdp-jp-iDv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="669-EI-NPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167.5" y="119.5"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="xhm-j4-pdh">
+            <objects>
+                <viewController id="mcu-Nx-qmh" customClass="ImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Bi-WW-58E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="jCz-aP-NNb">
+                                <rect key="frame" x="0.0" y="65" width="375" height="558"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" id="1HY-DV-3Wu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="558"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9wd-8W-XA9">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="add" id="1up-7c-tBA" userLabel="selectImageButton">
+                                        <connections>
+                                            <action selector="selectPictureForProcessing:" destination="mcu-Nx-qmh" id="eMp-gW-iv1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="15r-Qz-dPi"/>
+                                    <barButtonItem image="cog_01.png" style="plain" id="ASX-TS-o69" userLabel="showOptionsButton">
+                                        <connections>
+                                            <action selector="presentOptionsView:" destination="mcu-Nx-qmh" id="BaQ-kQ-aw6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3Q7-0e-E0U"/>
+                                    <barButtonItem style="plain" systemItem="save" id="8Le-pn-BXS" userLabel="navigationActionSheetButton">
+                                        <connections>
+                                            <action selector="selectAction:" destination="mcu-Nx-qmh" id="6az-hj-0gz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wds-pP-Fl2"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="actionButton" destination="8Le-pn-BXS" id="FEs-qO-Y53"/>
+                        <outlet property="containerView" destination="jCz-aP-NNb" id="hgx-la-gcE"/>
+                        <outlet property="optionsBarButton" destination="ASX-TS-o69" id="UUC-ry-Nbw"/>
+                        <outlet property="scrollView" destination="1HY-DV-3Wu" id="BmR-nT-Bv0"/>
+                        <outlet property="takePhotoButton" destination="1up-7c-tBA" id="lGU-50-2Ja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="weR-e1-nAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654.5" y="-325.5"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="XI5-SK-c2U">
+            <objects>
+                <viewController id="al8-eY-kEO" customClass="VideoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gam-EU-DL2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" id="y7O-D3-fIe">
+                                <rect key="frame" x="0.0" y="67" width="376" height="556"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFill" id="pVV-UR-mn6" customClass="UIImageView">
+                                        <rect key="frame" x="0.0" y="-66" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" updatesFrequently="YES"/>
+                                        </accessibility>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ERl-g1-7jC">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="switchCamera.png" style="plain" id="5l5-9Q-1ky" userLabel="switchCameraButton">
+                                        <connections>
+                                            <action selector="toggleCameraPressed:" destination="al8-eY-kEO" id="wfA-0f-LVB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="GfK-3u-TkC"/>
+                                    <barButtonItem image="photos_polaroid.png" style="plain" id="0bT-NE-pzb" userLabel="CaptureReferenceFrameButton">
+                                        <connections>
+                                            <action selector="captureReferenceFrame:" destination="al8-eY-kEO" id="2Nd-69-gZ9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xhk-0u-2BE"/>
+                                    <barButtonItem image="cog_01.png" style="plain" id="VNX-bb-6ra" userLabel="showOptionsButton">
+                                        <connections>
+                                            <action selector="showOptions:" destination="al8-eY-kEO" id="TaW-fy-oPj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cZT-Px-8yt"/>
+                                    <barButtonItem image="refresh_straight_arrows.png" style="plain" id="sI0-8h-mMk" userLabel="ClearReferenceFrameButton">
+                                        <connections>
+                                            <action selector="clearReferenceFrame:" destination="al8-eY-kEO" id="fyx-Iq-CF0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1ew-yZ-6Z7"/>
+                                    <barButtonItem style="plain" systemItem="save" id="muv-Z8-wkq" userLabel="navigationActionSheetButton">
+                                        <connections>
+                                            <action selector="showActionSheet:" destination="al8-eY-kEO" id="87A-qU-40Q"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2UO-1N-WX7">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="play" id="vwj-2F-bcA">
+                            <connections>
+                                <action selector="showProcessedVideo:" destination="al8-eY-kEO" id="m8g-SK-azr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="actionSheetButton" destination="muv-Z8-wkq" id="h6z-NZ-8wp"/>
+                        <outlet property="captureReferenceFrameButton" destination="0bT-NE-pzb" id="FRR-jM-jkx"/>
+                        <outlet property="clearReferenceFrameButton" destination="sI0-8h-mMk" id="wjp-ol-7Fn"/>
+                        <outlet property="containerView" destination="pVV-UR-mn6" id="tuZ-17-2lO"/>
+                        <outlet property="options" destination="VNX-bb-6ra" id="31N-uj-1Ft"/>
+                        <outlet property="processButton" destination="vwj-2F-bcA" id="Goo-2I-xwJ"/>
+                        <outlet property="scrollerView" destination="y7O-D3-fIe" id="f13-k1-Edj"/>
+                        <outlet property="toggleCameraButton" destination="5l5-9Q-1ky" id="Hv8-cH-3Aa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Bk-yv-6Cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654.5" y="423.5"/>
+        </scene>
+        <!--Choose Sample-->
+        <scene sceneID="QnL-1q-NYI">
+            <objects>
+                <tableViewController id="Hyy-sD-KUb" customClass="MasterViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6wr-e3-9f6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="S9K-gI-fxl">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S9K-gI-fxl" id="bl8-6c-PAq">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="b7X-TD-NML" kind="push" identifier="showDetail" id="rrB-Fb-2ja"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hyy-sD-KUb" id="uDs-aQ-3Kk"/>
+                            <outlet property="delegate" destination="Hyy-sD-KUb" id="731-1g-Vuy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose Sample" id="fHN-xC-ieb"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TW8-b6-kA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290.5" y="126.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c7y-3d-JWs">
+            <objects>
+                <navigationController id="OII-x6-X3i" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fTd-X7-JDW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Hyy-sD-KUb" kind="relationship" relationship="rootViewController" id="z4v-Qx-Utw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ru-cQ-0Xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-727.5" y="126.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.png" width="38" height="38"/>
+        <image name="cog_01.png" width="26" height="26"/>
+        <image name="photos_polaroid.png" width="26" height="26"/>
+        <image name="refresh_straight_arrows.png" width="26" height="26"/>
+        <image name="switchCamera.png" width="43" height="26"/>
+    </resources>
+</document>
